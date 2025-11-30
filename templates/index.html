@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ครบรอบ 1 ปี 11 เดือน</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="heart-background"></div>
+        
+        <header>
+            <h1 class="title">ครบรอบ 1 ปี 11 เดือน</h1>
+            <p class="subtitle">ของเราเริ่มต้นเมื่อ {{ start_date }}</p>
+        </header>
+
+        <main>
+            
+            <div class="message-section">
+                <h2>ข้อความถึงคนที่ฉันรัก</h2>
+                <div class="message">
+                    <p>ในทุกๆ วันที่มีเธอ ชีวิตของฉันสวยงามเสมอ</p>
+                    <p>ผ่านมา เดือนแล้ว แต่ความรู้สึกยังเหมือนวันแรก</p>
+                    <p>รักเธอมากกว่าวันวาน และจะรักมากขึ้นในวันพรุ่งนี้</p>
+                    <p class="signature">ด้วยรักจากใจ</p>
+                </div>
+            </div>
+
+            <div class="photo-section">
+                
+                <div class="photo-grid">
+                    <!-- แถวที่ 1 -->
+                    <div class="photo-row">
+                        <div class="photo-item">
+                            <div class="photo-frame">
+                                <img src="{{ url_for('static', filename='image/kim.jpg') }}" alt="ความทรงจำ 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder">📸 รูปที่ 1</div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div class="photo-frame">
+                                <img src="{{ url_for('static', filename='image/kim2.jpg') }}" alt="ความทรงจำ 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder">📸 รูปที่ 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- แถวที่ 2 -->
+                    <div class="photo-row">
+                        <div class="photo-item">
+                            <div class="photo-frame">
+                                <img src="{{ url_for('static', filename='image/kim3.jpg') }}" alt="ความทรงจำ 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder">📸 รูปที่ 3</div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div class="photo-frame">
+                                <img src="{{ url_for('static', filename='image/kim4.jpg') }}" alt="ความทรงจำ 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder">📸 รูปที่ 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+
+        <footer>
+            <p>สร้างขึ้นด้วยความรัก ❤️</p>
+        </footer>
+    </div>
+
+     <!-- ใช้ data attribute ส่ง URL ของรูปภาพไปยัง JavaScript -->
+    <div id="image-data" 
+         data-image-url="{{ url_for('static', filename='image/shi.jpg') }}" 
+         style="display: none;">
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
