@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Itim', cursive;
+    font-family: 'Bangnumpueng', cursive;
     background: linear-gradient(135deg, #ffafbd, #ffc3a0);
     color: #5a3e36;
     min-height: 100vh;
@@ -68,7 +68,7 @@ header {
     font-size: 2.5rem;
     font-weight: bold;
     color: #d32f2f;
-    font-family: 'Charm', cursive;
+    font-family: 'Bangnumpueng', cursive;
 }
 
 .label {
@@ -88,7 +88,7 @@ header {
     color: #d32f2f;
     margin-bottom: 15px;
     text-align: center;
-    font-family: 'Charm', cursive;
+    font-family: 'Bangnumpueng', cursive;
 }
 
 .message p {
@@ -100,7 +100,7 @@ header {
 
 .signature {
     text-align: right !important;
-    font-style: italic;
+    font-style: Bangnumpueng;
     margin-top: 20px !important;
 }
 
@@ -256,3 +256,4 @@ footer {
         font-size: 1rem;
     }
 }
+
