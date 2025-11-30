@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'SanamDeklen_chaya', cursive;
+    font-family: 'Itim', cursive;
     background: linear-gradient(135deg, #ffafbd, #ffc3a0);
     color: #5a3e36;
     min-height: 100vh;
@@ -36,7 +36,7 @@ header {
 }
 
 .title {
-    font-family: 'SanamDeklen_chaya', cursive;
+    font-family: 'Charm', cursive;
     font-size: 2.5rem;
     color: #d32f2f;
     margin-bottom: 10px;
@@ -65,7 +65,7 @@ header {
 
 .number {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #d32f2f;
     font-family: 'Charm', cursive;
@@ -88,7 +88,7 @@ header {
     color: #d32f2f;
     margin-bottom: 15px;
     text-align: center;
-    font-family: 'SanamDeklen_chaya', cursive;
+    font-family: 'Charm', cursive;
 }
 
 .message p {
@@ -104,25 +104,8 @@ header {
     margin-top: 20px !important;
 }
 
-.photo-section {
-    margin: 25px 0;
-}
-
-.photo-frame {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 3px dashed #ff6b6b;
-}
-
-.photo-placeholder {
-    font-size: 1.5rem;
-    color: #7b5e57;
-}
-
-.memory-section {
+/* ส่วนรูปภาพใหม่ */
+.photos-section {
     background: rgba(255, 255, 255, 0.85);
     padding: 25px;
     border-radius: 20px;
@@ -130,24 +113,68 @@ header {
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.memory-section h2 {
+.photos-section h2 {
     color: #d32f2f;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: 'Charm', cursive;
 }
 
-.memories {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.photos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.memory {
-    background: #ffebee;
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo-frame {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
     padding: 15px;
-    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 3px solid #ff6b6b;
+    width: 100%;
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.photo-placeholder {
+    font-size: 1.2rem;
+    color: #7b5e57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.photo-caption {
+    font-size: 1rem;
+    color: #d32f2f;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(255, 235, 238, 0.8);
+    padding: 8px 15px;
+    border-radius: 20px;
     border: 1px solid #ffcdd2;
 }
 
@@ -180,162 +207,25 @@ footer {
     }
     
     .number {
-        font-size: 2.5rem;
-    }
-    
-    .memories {
-        grid-template-columns: 1fr;
+        font-size: 2rem;
     }
     
     .container {
         padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 1.8rem;
-    }
-    
-    .number {
-        font-size: 2rem;
-    }
-    
-    .message p {
-        font-size: 1rem;
-    }
-}
-
-/* สไตล์สำหรับรูปภาพเมื่อคลิก */
-.click-image {
-    border: 2px solid #ff6b6b;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5);
-}
-
-/* ทำให้ภาพเป็นวงกลม */
-.rounded-image {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
-.photo-section {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 25px;
-    border-radius: 20px;
-    margin: 25px 0;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-
-
-.photo-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.photo-row {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.photo-item {
-    flex: 1;
-    max-width: calc(100% - 10px);
-}
-
-.photo-frame {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border: 2px solid #ff6b6b;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.photo-frame:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
-}
-
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    display: none;
-}
-
-.photo-frame img[src]:not([src=""]) {
-    display: block;
-}
-
-.photo-placeholder {
-    font-size: 1.2rem;
-    color: #7b5e57;
-    display: none;
-}
-
-.photo-frame:has(img[style*="display: none"]) .photo-placeholder,
-.photo-frame:not(:has(img[src]:not([src=""]))) .photo-placeholder {
-    display: block;
-}
-
-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    color: #7b5e57;
-    font-size: 1.1rem;
-}
-
-/* Animation for hearts */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.heart {
-    position: fixed;
-    font-size: 20px;
-    animation: float 3s ease-in-out infinite;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-    }
-    
-    .number {
-        font-size: 2rem;
-    }
-    
-    .photo-row {
-        flex-direction: column;
-    }
-    
-    .photo-item {
-        max-width: 100%;
     }
     
     .photo-frame {
-        height: 150px;
+        max-width: 250px;
+        min-height: 180px;
     }
     
-    .container {
-        padding: 15px;
+    .photo-frame img {
+        height: 130px;
+    }
+    
+    .photo-placeholder {
+        height: 130px;
+        font-size: 1.1rem;
     }
 }
 
@@ -353,6 +243,16 @@ footer {
     }
     
     .photo-frame {
-        height: 120px;
+        max-width: 200px;
+        min-height: 150px;
+    }
+    
+    .photo-frame img {
+        height: 110px;
+    }
+    
+    .photo-placeholder {
+        height: 110px;
+        font-size: 1rem;
     }
 }
